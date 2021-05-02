@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: gulp dev
+    env_file:
+      - .env
+    volumes:
+      - .:/app/code
+    ports:
+      - "8000:8000"
+      - "8005:8005"
